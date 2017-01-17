@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<localRepository>D:\mvn_repository</localRepository>
+  <mirrors>
+    <mirror>
+      <id>warefont-repository</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://warefont.3322.org:8081/nexus/content/groups/public</url>
+    </mirror>
+    
+  </mirrors>
+
+    
+  <profiles>
+    <profile>
+      <id>warefont</id>
+      <repositories>
+        <repository>
+            <id>warefont-public</id>
+            <name>warefont private nexus</name>
+            <url>http://warefont.3322.org:8081/nexus/content/groups/public</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+        <repository>
+            <id>warefont-public-snapshot</id>
+            <name>warefont private nexus</name>
+            <url>http://warefont.3322.org:8081/nexus/content/groups/public-snapshot</url>
+            <releases><enabled>false</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
+        </repository>        
+      </repositories>
+      <pluginRepositories>          
+        <pluginRepository>
+            <id>warefont-plugin-public</id>
+            <name>warefont private nexus</name>
+            <url>http://warefont.3322.org:8081/nexus/content/groups/public</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>warefont-plugin-public-snapshot</id>
+            <name>warefont private nexus</name>
+            <url>http://warefont.3322.org:8081/nexus/content/groups/public-snapshot</url>
+            <releases><enabled>false</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>        
+       </pluginRepositories>
+    </profile>
+  </profiles>
+ 
+  <activeProfiles>
+    <activeProfile>warefont</activeProfile>
+  </activeProfiles>
+
+</settings>
